@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Tools used - InSightKosovo</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<!-- <h1>
+				<a href="index.html" id="logo">
+				  <em>Welcome to the </em>
+				  <span style="color: #00BFFF; font-style: italic;">InSightKosovo</span>
+				  <em> Website</em>
+				</a>
+			  </h1> -->
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li>
+						<a href="#">Pollutants</a>
+						<ul>
+							<li><a href="no2.html">Nitrogen dioxide</a></li>
+							<li><a href="pm2p5.html">Particulate matter 2.5</a></li>
+							<li><a href="pm10.html">Particulate matter 10</a></li>
+						</ul>
+					</li>
+					<li><a href="mapsdescription.html">Maps description</a></li>
+					<li><a href ='statistics.html'> Statistics </a></li>
+					<li class="current"><a href="tools_used.html">Tools used</a></li>
+					<li><a href="pages/webgis.html">Map</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<section class="wrapper style1">
+			<div class="container" , style="text-align: justify;">
+				<div id="content">
+
+					<header class="major">
+						<h3>QGis</h3>
+						<p></p>
+					</header>
+						<div class="row gtr-200">
+							<div class="col-6 col-12-narrower">
+								<p>QGIS was employed as the main platform for the processing, analysis and visualization of spatial data. Multi-year pollutant maps (NO₂, PM₂.₅), land cover datasets and population distributions were imported, reprojected, and clipped to the national extent of Kosovo.
+									Pollution layers were processed using the “Raster Calculator” to compute the Annual Average Difference and then reclassified according to EU health thresholds. Population data were divided into quantile-based classes to ensure comparability.
+									
+								</p>
+								<p>“Zonal Statistics” were applied to extract the maximum pollution class and median population class within administrative areas. These were combined into a single bivariate index to produce an exposure map, highlighting zones of environmental concern.
+									Additional tools such as “Dissolve” and “DataPlotly” were used to aggregate population statistics and generate graphical summaries, including pie charts, which were later integrated into the project website.
+									
+								</p>
+							</div>
+							<div class="col-6 col-12-narrower">
+								<section id="qgis_logo">
+								</section>
+							</div>
+						</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="wrapper style5">
+			<div class="container">
+				<header class="major">
+					<h3>Visual Studio Code</h3>
+					<p></p>
+				</header>
+
+				<!-- Second paragraph -->
+				<div class="row gtr-200">
+					<div class="col-6 col-12-narrower" style="text-align: center;">
+						<section id="vsc_logo">
+						</section>
+					</div>
+					<div class="col-6 col-12-narrower" , style="text-align: justify;">
+						<p>Visual Studio Code was adopted as the primary development environment for the implementation of the project website and the integration of the WebGIS component. Its versatility and compatibility with standard web technologies such as HTML, CSS, and JavaScript made it particularly suitable for structuring and customizing the website.
+							The website was designed to include multiple sections, aimed at communicating the objectives, methodology, datasets, and outcomes of the project. HTML templates were customized and extended directly within the Visual Studio Code environment to ensure clarity, consistency, and responsiveness.
+							
+						</p>
+						<p>
+							JavaScript libraries, particularly OpenLayers, were incorporated to implement the interactive web map. Functionalities such as the scale line, full screen toggle, mouse position display, and layer switching were integrated using code editing and tested directly within the VSC interface.
+							The editor also facilitated real-time preview, syntax checking, and effective project file organization, thereby supporting a streamlined and efficient development process.							
+						</p>
+					</div>				
+				</div>
+
+				<!-- Terzo blocco -->
+				<div class="container">
+					<header class="major">
+						<h3>Geoserver and FileZilla</h3>
+						<p></p>
+					</header>
+					<div class="row gtr-200">
+						<div class="col-6 col-12-narrower" , style="text-align: justify;">
+							<p>
+								GeoServer is an open-source server software designed to facilitate the sharing, editing, and publication of geospatial data through standard web services such as WMS and WFS.
+Within the framework of this project, GeoServer was used to publish the layers generated in QGIS, in order to make them accessible and usable directly in the WebGIS interface.
+
+							</p>
+							<p>
+								The layers were first prepared and styled in QGIS, then exported (as GeoTIFF or GeoPackage files) and uploaded to the designated GeoServer instance. This transfer was carried out using FileZilla, a secure FTP client, which allowed the upload of the raster and vector datasets into the appropriate directory on the server. Once uploaded, the layers were configured within 
+								the GeoServer interface, where the appropriate coordinate reference system, styling (SLD), and service settings were defined.
+							</p>
+							<p>
+								These published layers were then integrated into the website using OpenLayers, enabling interactive visualization of spatial data directly from the server through standard WMS requests.
+								This workflow ensured centralized data management, dynamic rendering, and efficient delivery of spatial information in the final web platform.
+							</p>
+						</div>
+						<div class="col-6 col-12-narrower">
+							<section id="gf_logo">
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="wrapper style5">
+				<div class="container">
+					<header class="major">
+						<h3>Excel</h3>
+						<p></p>
+					</header>
+	
+					<!-- Second paragraph -->
+					<div class="row gtr-200">
+						<div class="col-6 col-12-narrower" style="text-align: center;">
+							<section id="excel_logo">
+							</section>
+						</div>
+						<div class="col-6 col-12-narrower" , style="text-align: justify;">
+							<p>Microsoft Excel is a widely used spreadsheet application designed for data organization, analysis, and visualization. In the context of this project, Excel was utilized 
+							to generate simple charts and graphs based on extracted statistical data, supporting the interpretation of population exposure and pollutant distributions.
+							</p>
+						</div>				
+					</div>
+	
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
